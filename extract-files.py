@@ -22,7 +22,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/zte/akershus',
+    'device/oppo/findx',
     'hardware/qcom-caf/sdm845',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -74,29 +74,20 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libnativehelper_shim.so'),
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so'),
-    'vendor/lib/libZEffectLib.so': blob_fixup()
-        .add_needed('libui_shim.so'),
-    ('vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service', 'vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so', 'vendor/lib64/com.fingerprints.extension@1.0.so'): blob_fixup()
+    ('vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service', 'vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so'): blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     ('vendor/lib/libtsvideoprocess.so', 'libswregistrationalgo'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    'vendor/lib/libFNVfbEngineHAL.so': blob_fixup()
-        .clear_symbol_version('AHardwareBuffer_allocate')
-        .clear_symbol_version('AHardwareBuffer_describe')
-        .clear_symbol_version('AHardwareBuffer_lock')
-        .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock'),
-    'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
+    'vendor/lib64/libvidhance.so': blob_fixup()
+        .add_needed('libdemangle.so')
+        .add_needed('libcomparetf2_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'akershus',
-    'zte',
+    'findx',
+    'oppo',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
