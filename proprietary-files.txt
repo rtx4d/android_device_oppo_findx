@@ -69,8 +69,11 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libvolumelistener.so
 
-# Audio (speaker amplifier) firmware - A10
-vendor/firmware/tfa98xx.cnt
+# Audio (speaker amplifier) firmware
+vendor/firmware/audience/ia6xx/ia6xx-bargein-hw.bin
+vendor/firmware/audience/ia6xx/ia6xx-bargein-uart.bin
+vendor/firmware/audience/ia6xx/ia6xx-vs-hw.bin
+vendor/firmware/audience/ia6xx/ia6xx-vs-uart.bin
 
 # ANT+ (system) - from Z01R WW_user_100.10.107.123_20210131
 product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
@@ -80,7 +83,7 @@ system/lib64/libantradio.so:system_ext/lib64/libantradio.so|c1d700c334504c72ae12
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|c62ace5431a6ab113d8762e1c336085fcf686f53
 vendor/lib64/com.qualcomm.qti.ant@1.0.so;MODULE_SUFFIX=_vendor|4e7dd19fb51e02a36c5154bf7609822f5279b4c5
 
-# Bluetooth (A2DP) - A10
+# Bluetooth (A2DP)
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
@@ -88,7 +91,7 @@ vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
-# Bluetooth - A10
+# Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -108,16 +111,6 @@ vendor/lib64/libsdsprpc.so|5837406a179e8964aac9d3752d18e5b51ac7e0b7
 vendor/lib64/libsysmon_cdsp_skel.so|e16a11b61e4ce3802211ad1d0572df64cf2ed14b
 
 # Camera configs - A9
-vendor/etc/camera/beautiful_app/preference_beautify0.json
-vendor/etc/camera/beautiful_app/preference_beautify1.json
-vendor/etc/camera/beautiful_app/preference_beautify2.json
-vendor/etc/camera/beautiful_app/switch_sensor0.xml
-vendor/etc/camera/beautiful_app/switch_sensor1.xml
-vendor/etc/camera/beautiful_fn/fn_default.xml
-vendor/etc/camera/beautiful_fn/fn_imx363.xml
-vendor/etc/camera/beautiful_fn/fn_s5k3t1_aux.xml
-vendor/etc/camera/beautiful_fn/fn_s5k3t1_front.xml
-vendor/etc/camera/beautiful_fn/fn_sensor
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/color_filters_glinfo.bin
 vendor/etc/camera/ldc_tbl_2560x1920.bin
@@ -128,67 +121,17 @@ vendor/etc/camera/vfbglinfo.bin
 vendor/etc/camera/VfbTuningInterface.xml
 
 # Camera lib - A9
-vendor/lib/camera/components/com.arcsoft.node.capturebokeh.so
-vendor/lib/camera/components/com.arcsoft.node.realtimebokeh.so
-vendor/lib/camera/components/com.qti.eisv2.so
-vendor/lib/camera/components/com.qti.eisv3.so
-vendor/lib/camera/components/com.qti.hvx.addconstant.so
-vendor/lib/camera/components/com.qti.hvx.binning.so
-vendor/lib/camera/components/com.qti.node.dummyrtb.so
-vendor/lib/camera/components/com.qti.node.dummysat.so
-vendor/lib/camera/components/com.qti.node.eisv2.so
-vendor/lib/camera/components/com.qti.node.eisv3.so
-vendor/lib/camera/components/com.qti.node.gpu.so
-vendor/lib/camera/components/com.qti.node.memcpy.so
-vendor/lib/camera/components/com.qti.node.remosaic.so
-vendor/lib/camera/components/com.qti.node.stich.so
-vendor/lib/camera/components/com.qti.node.swregistration.so
-vendor/lib/camera/components/com.qti.stats.aec.so
-vendor/lib/camera/components/com.qti.stats.af.so
-vendor/lib/camera/components/com.qti.stats.afd.so
-vendor/lib/camera/components/com.qti.stats.asd.so
-vendor/lib/camera/components/com.qti.stats.awb.so
-vendor/lib/camera/components/com.qti.stats.awbwrapper.so
-vendor/lib/camera/components/com.qti.stats.pdlib.so
-vendor/lib/camera/components/com.qti.stats.pdlibsony.so
-vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib/camera/components/com.qtistatic.stats.aec.so
-vendor/lib/camera/components/com.qtistatic.stats.af.so
-vendor/lib/camera/components/com.qtistatic.stats.awb.so
-vendor/lib/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib/camera/components/com.zte.node.capturepostprocess.so
-vendor/lib/camera/components/com.zte.node.realtimepostprocess.so
-vendor/lib/camera/components/com.zte.node.videopostprocess.so
-vendor/lib/camera/com.qti.ois.ois_bu63169.so
-vendor/lib/camera/com.qti.sensor.imx363.so
-vendor/lib/camera/com.qti.sensor.s5k3t1sp_aux.so
-vendor/lib/camera/com.qti.sensor.s5k3t1sp_front.so
-vendor/lib/camera/com.qti.sensormodule.zte_imx363_3spi.bin
-vendor/lib/camera/com.qti.sensormodule.zte_imx363_ak7374.bin
-vendor/lib/camera/com.qti.sensormodule.zte_imx363_hz.bin
-vendor/lib/camera/com.qti.sensormodule.zte_imx363_hz_invens.bin
-vendor/lib/camera/com.qti.sensormodule.zte_s5k3t1sp_aux.bin
-vendor/lib/camera/com.qti.sensormodule.zte_s5k3t1sp_front.bin
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.zte_imx363.bin
-vendor/lib/camera/com.qti.tuned.zte_imx363_ak7374.bin
-vendor/lib/camera/com.qti.tuned.zte_imx363_hz.bin
-vendor/lib/camera/com.qti.tuned.zte_s5k3t1sp_aux.bin
-vendor/lib/camera/com.qti.tuned.zte_s5k3t1sp_front.bin
-vendor/lib/camera/fdconfigpreview.bin
-vendor/lib/camera/fdconfigpreviewlite.bin
-vendor/lib/camera/fdconfigvideo.bin
-vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib/camera/titan17x_usecases.bin
+vendor/lib/camera/components/
+vendor/lib/camera/
 
-# Camera hal - A9
-vendor/lib/hw/camera.qcom.so
-vendor/lib/hw/com.qti.chi.override.so
+# Camera hal
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
 
-# Camera firmware - A9
+# Camera firmware
 vendor/firmware/CAMERA_ICP.elf
 
-# Camera core - A9
+# Camera core - A9 64 BIT???????????????????????????????????
 vendor/lib/libalhLDC.so
 vendor/lib/libarcsoft_dualcam_portraitlighting.so
 vendor/lib/libarcsoft_dualcam_refocus.so
@@ -296,12 +239,12 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so;MODULE_SUFFIX=_vendor|b17a82a97
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|07bf28004086b972367c44703bd0247d7a78faf4
 vendor/lib64/vendor.qti.latency@2.0.so|1589280034898a0ab3052234ef90b7c674d5be5b
 
-# Configstore - A10
+# Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Charger - A10
+# Charger
 vendor/bin/hvdcp_opti
 
 # Display (HDR) - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
@@ -330,24 +273,6 @@ vendor/lib64/vendor.display.color@1.3.so|3fbe0a8a317789608848f35b39ed9bfb734f9ec
 vendor/lib64/vendor.display.color@1.4.so|1396673668977af0a8afeaa64f891c3b356f958d
 vendor/lib64/vendor.display.color@1.5.so|f1c12eb133698917385d48913358eaffd9a10879
 vendor/lib64/vendor.display.postproc@1.0.so|e56b66d744dd77bd87afbb30cab558acf15709fb
-
-# Display firmware (PixelWorks Iris) - from ZTE/GEN_CN_P845A02/P845A02:9/PKQ1.181105.001/20191029.111702:user/release-keys
-vendor/firmware/iris2p.fw
-
-# Display IRIS2P (PixelWorks Iris) - from ZTE/GEN_CN_P845A02/P845A02:9/PKQ1.181105.001/20191029.111702:user/release-keys
-vendor/lib/libpwirispq.so
-vendor/lib64/libpwirispq.so
-vendor/firmware/inParmFile/inParm1.txt
-vendor/firmware/inParmFile/inParm2.txt
-vendor/firmware/inParmFile/inParm3.txt
-vendor/firmware/inParmFile/inParm4.txt
-vendor/firmware/inParmFile/inParm5.txt
-vendor/firmware/inParmFile/inParm6.txt
-vendor/firmware/inParmFile/inParm7.txt
-vendor/firmware/inParmFile/inParm8.txt
-vendor/firmware/inParmFile/inParm9.txt
-vendor/firmware/inParmFile/inParm10.txt
-vendor/firmware/inParmFile/inParm11.txt
 
 # DPM - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 system_ext/bin/dpmd|bc22fa258f3975744e248dc7d9f26a00a9981ca7
@@ -398,11 +323,7 @@ vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|81cd0527ccb009ed1d644409e5f16465b8a78da1
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|f176bd6f4bb7fd4453479dd04c407a2d0cb41f9f
 
-# Fingerprint - A9
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc1028
-vendor/lib64/com.fingerprints.extension@1.0.so
-
-# Gatekeeper - A9
+# Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
@@ -497,7 +418,7 @@ vendor/lib64/libllvm-glnext.so|c11e3f0f5b6d21d1badcca3bc8cac947c781deeb
 vendor/lib64/libllvm-qcom.so|a80c58c8f316af15a7a2d089536f824836f6c056
 vendor/lib64/libpvr.so|ac4805ba7a7c78570a60340d01248d258046e456
 
-# Graphics (Firmware) - A10
+# Graphics (Firmware)
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a630_zap.b00
@@ -582,7 +503,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|516268b5b3e044429f40b5101aa1f42563e
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|6302b61d7d1580254c091cce8ad5e121dbd73ace
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor|25517caf74691b812320b46b477a3f4161cc1bcf
 
-# IPA firmware - A10
+# IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
@@ -596,7 +517,7 @@ vendor/firmware/ipa_fws.mdt
 vendor/bin/msm_irqbalance|54c73b55125b13fa40abf3852bfae31bc217eddc
 vendor/etc/msm_irqbalance.conf|7394fdd30f52142ff99dd03e5ff991000c34a356
 
-# Keymaster - A9
+# Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
@@ -625,9 +546,6 @@ vendor/lib64/libhexagon_nn_stub.so|a3676113882842116279fe902af00e630ec1778c
 vendor/lib64/unnhal-acc-adreno.so|7ad6daa9bf39c5a199b2afb1bd60c1ae53ffbb06
 vendor/lib64/unnhal-acc-common.so|32fdec585f2d710e37ffe327894aec6a7ea220eb
 vendor/lib64/unnhal-acc-hvx.so|3e44efdca5e1c20ca4bf00c6a5f19fc1863c9830
-
-# NFC - A10
-vendor/lib/libpn553_fw.so
 
 # OMX - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 vendor/lib/libOmxVpp.so|7a9a96445b55f28013ea8f4ed767c7e245420c4f
@@ -794,93 +712,16 @@ vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib/libsnsdiaglog.so
 
-# Sensors configs - A9
+# Sensors configs
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bma2x2_0.json
-vendor/etc/sensors/config/bme680_0.json
-vendor/etc/sensors/config/bmg160_0.json
-vendor/etc/sensors/config/bmi160_0.json
-vendor/etc/sensors/config/bmm150_0.json
-vendor/etc/sensors/config/bmp285_0.json
-vendor/etc/sensors/config/bu52053nvx_0.json
-vendor/etc/sensors/config/cm3526_0.json
-vendor/etc/sensors/config/default_sensors.json
-vendor/etc/sensors/config/dps368_0.json
-vendor/etc/sensors/config/icm20690_0.json
-vendor/etc/sensors/config/lsm6ds3_0.json
-vendor/etc/sensors/config/lsm6dsm_0.json
-vendor/etc/sensors/config/lsm6dsm_0_16g.json
-vendor/etc/sensors/config/lsm6dsm_0_8g.json
-vendor/etc/sensors/config/lsm6dso_0.json
-vendor/etc/sensors/config/lsm6dso_0_16g.json
-vendor/etc/sensors/config/lsm6dso_0_8g.json
-vendor/etc/sensors/config/ltr308_0_on_change.json
-vendor/etc/sensors/config/pah_8011_0_platform.ppg_enable_ex_1.json
-vendor/etc/sensors/config/pah_8011_0_platform.ppg_enable_ex_2.json
-vendor/etc/sensors/config/rpr0521rs_0.json
-vendor/etc/sensors/config/sdm845_2p5K_tmx4903.json
-vendor/etc/sensors/config/sdm845_4K_tmx4903.json
-vendor/etc/sensors/config/sdm845_ak991x_0.json
-vendor/etc/sensors/config/sdm845_bma2x2_0.json
-vendor/etc/sensors/config/sdm845_bme680_0.json
-vendor/etc/sensors/config/sdm845_bmg160_0.json
-vendor/etc/sensors/config/sdm845_bmm150_0.json
-vendor/etc/sensors/config/sdm845_bmp285_0.json
-vendor/etc/sensors/config/sdm845_bu52053nvx_0.json
-vendor/etc/sensors/config/sdm845_cm3526_0.json
-vendor/etc/sensors/config/sdm845_icm20690_0.json
-vendor/etc/sensors/config/sdm845_irq.json
-vendor/etc/sensors/config/sdm845_lsm6dsm_0.json
-vendor/etc/sensors/config/sdm845_lsm6dso_0.json
-vendor/etc/sensors/config/sdm845_power_0.json
-vendor/etc/sensors/config/sdm845_qrd_power_0.json
-vendor/etc/sensors/config/sdm845_qvr_ak991x_0.json
-vendor/etc/sensors/config/sdm845_shtw2_0.json
-vendor/etc/sensors/config/sdm845_svr_bma2x2_0.json
-vendor/etc/sensors/config/sdm845_svr_bmg160_0.json
-vendor/etc/sensors/config/sdm845_svr_rpr0521rs_0.json
-vendor/etc/sensors/config/sdm845_tmd2725.json
-vendor/etc/sensors/config/sdm845_tmd3725.json
-vendor/etc/sensors/config/sdm845_tmx4903.json
-vendor/etc/sensors/config/shtw2_0.json
-vendor/etc/sensors/config/sns_amd.json
-vendor/etc/sensors/config/sns_amd_sw_disabled.json
-vendor/etc/sensors/config/sns_amd_sw_enabled.json
-vendor/etc/sensors/config/sns_aont.json
-vendor/etc/sensors/config/sns_basic_gestures.json
-vendor/etc/sensors/config/sns_bring_to_ear.json
-vendor/etc/sensors/config/sns_ccd.json
-vendor/etc/sensors/config/sns_cm.json
-vendor/etc/sensors/config/sns_dae.json
-vendor/etc/sensors/config/sns_device_orient.json
-vendor/etc/sensors/config/sns_diag_filter.json
-vendor/etc/sensors/config/sns_distance_bound.json
-vendor/etc/sensors/config/sns_dpc.json
-vendor/etc/sensors/config/sns_facing.json
-vendor/etc/sensors/config/sns_fmv.json
-vendor/etc/sensors/config/sns_geomag_rv.json
-vendor/etc/sensors/config/sns_gyro_cal.json
-vendor/etc/sensors/config/sns_heart_rate.json
-vendor/etc/sensors/config/sns_mag_cal.json
-vendor/etc/sensors/config/sns_multishake.json
-vendor/etc/sensors/config/sns_pedometer.json
-vendor/etc/sensors/config/sns_rmd.json
-vendor/etc/sensors/config/sns_rotv.json
-vendor/etc/sensors/config/sns_smd.json
-vendor/etc/sensors/config/sns_tilt.json
-vendor/etc/sensors/config/sns_tilt_sw_disabled.json
-vendor/etc/sensors/config/sns_tilt_sw_enabled.json
-vendor/etc/sensors/config/sns_tilt_to_wake.json
-vendor/etc/sensors/config/sns_wrist_pedo.json
-vendor/etc/sensors/config/tmd2725.json
-vendor/etc/sensors/config/tmd3725.json
-vendor/etc/sensors/config/tmx4903.json
+???????????????????????????????????????????????????????????????
+
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
-# QDCM - A9
-vendor/etc/qdcm_calib_data_KINGDISPLAY-RM69299-1080-2248-6P2Inch.xml
-vendor/etc/qdcm_calib_data_zteSAM_S6E3FA3_SAM_1080x2248_6P2Inch.xml
+# QDCM
+vendor/etc/qdcm_calib_data_dsi_oppo17107_samsung_sofeg02_fhd_dsc_cmd.xml
 
 # Snapdragon Computer Vision Engine - from Z01R WW_user_100.10.107.123_20210131
 vendor/etc/scve/facereco/gModel.dat|447e5e3fefe8bcf36db0f7a8595c63fb326879ba
@@ -917,12 +758,12 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|14a82d8be3afd48e470d8f5ac450efdbf9faf9bc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|d51585cec19572794efd0e7d58866d0478421ae6
 
-# Thermal engine - A9
+# Thermal engine
 vendor/bin/thermal-engine
 vendor/lib64/libthermalclient.so
 vendor/lib/libthermalclient.so
 
-# Thermal configs - A9
+# Thermal configs
 vendor/etc/thermal-engine.conf
 
 # Time services - from Z01R WW_user_100.10.107.123_20210131
@@ -932,8 +773,10 @@ vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|d989a9953b44a4682fbcb8a01cdc1e69bdbb97f5
 vendor/lib/libtime_genoff.so|5030aee0c580b15a31a0201f01b1aa4d2a684c7e
 
-# Touchscreen firmware (Synaptics) - ZTE A10
-vendor/firmware/startup_fw_update_gvo.img
+# Touchscreen firmware
+vendor/firmware/tp/17107/FW_S6Y761_SAMSUNG.bin
+vendor/firmware/tp/17107/FW_S6Y761_SAMSUNG_FAE.bin
+vendor/firmware/tp/17107/LIMIT_S6Y761_SAMSUNG.img
 
 # Trusted Execution Environment connector - from Z01R WW_user_100.10.107.123_20210131
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|2a9f02e8b042a726357c8875804d217b1e6547d7
