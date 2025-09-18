@@ -1,6 +1,6 @@
 # Device proprietary files - OPPO/sdm845/sdm845:10/QKQ1.191008.001/1622471973:user/release-keys
 
-# ACDBn
+# ACDB
 vendor/etc/acdbdata/17107/Codec_cal.acdb
 vendor/etc/acdbdata/17107/Bluetooth_cal.acdb
 vendor/etc/acdbdata/17107/Speaker_cal.acdb
@@ -658,6 +658,8 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|74675e4f720d75db031a0db4ca21463ebd
 
 # QMI - from PNX - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_21F-release-keys
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
+
+# QMI
 vendor/bin/irsc_util|c2cb91666e88000df258730cd4a0a81a207a2704
 vendor/etc/sec_config|9114ff721c1b6c5a2d9e3fb8c93a215685f1f7df
 vendor/lib64/libdiag.so|e310c29ca02dbfe6d07fce8f9fefc01eafd23594
