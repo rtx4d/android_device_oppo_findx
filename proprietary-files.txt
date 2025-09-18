@@ -223,6 +223,7 @@ vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcom.qti.chinodeutils.so
+vendor/lib64/libcvface_api.so
 vendor/lib64/libhypnusclient.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libmmcamera_faceproc.so
