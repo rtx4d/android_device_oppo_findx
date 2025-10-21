@@ -1,27 +1,42 @@
-on init
-    # Torch
-    chown system camera /sys/class/leds/led:torch_0/brightness
-    chown system camera /sys/class/leds/led:torch_1/brightness
-    chown system camera /sys/class/leds/led:flash_0/brightness
-    chown system camera /sys/class/leds/led:flash_1/brightness
-    chown system camera /sys/class/leds/led:switch_0/brightness
-    chmod 0664 /sys/class/leds/led:torch_0/brightness
-    chmod 0664 /sys/class/leds/led:torch_1/brightness
-    chmod 0664 /sys/class/leds/led:flash_0/brightness
-    chmod 0664 /sys/class/leds/led:flash_1/brightness
-    chmod 0664 /sys/class/leds/led:switch_0/brightness
-
-# Charger
-    # Create hvdcp_opti directory
-    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
-
-on charger
-    start vendor.hvdcp_opti
-    start power_off_alarm
-    setprop vendor.usb.controller a600000.dwc3
-    setprop sys.usb.configfs 1 
-
-# DT2W
 on boot
-    chmod 0660 /proc/touchscreen/wake_gesture
-    chown system system /proc/touchscreen/wake_gesture
+    start rmt_storage
+    start rfs_access
+
+# proximity_power
+    chown system system /sys/bus/platform/devices/vendor:proximity_power/enable
+    chmod 0666 /sys/bus/platform/devices/vendor:proximity_power/enable
+
+# motor_pl
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/direction
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/enable
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/speed
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/hall_data
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/hall_max_data
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/hall_calibration
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/in_calibration
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/hall_irq_count
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/move_state
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/sw_switch
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/manual2auto_switch
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/motor_test
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/force_move
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/mode
+    chown system system /sys/bus/platform/devices/vendor:motor_pl/stop_range
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/direction
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/enable
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/speed
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/hall_data
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/hall_max_data
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/hall_calibration
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/in_calibration
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/hall_irq_count
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/move_state
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/sw_switch
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/manual2auto_switch
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/motor_test
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/force_move
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/mode
+    chmod 0666 /sys/bus/platform/devices/vendor:motor_pl/stop_range
+
+# smart mic
+    chmod 0660 /dev/ttyHS1

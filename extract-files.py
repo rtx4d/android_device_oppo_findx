@@ -25,6 +25,7 @@ namespace_imports = [
     'device/oppo/findx',
     'hardware/qcom-caf/sdm845',
     'hardware/qcom-caf/wlan',
+    'hardware/qcom/wlan/legacy',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/dataservices',

@@ -1,2 +1,10 @@
+# Camera
+ro.camera.hfr.enable=1
+ro.camera.3d.structured.light.enable=1
+ro.camera.dualcam.type=2
+ro.camera.temperature.limit=430
+ro.camera.relight.enable=1
+ro.camera.portrait.blur.level.enable=1
+
 # QC framework value-adds
 ro.vendor.qti.va_odm.support=1

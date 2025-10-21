@@ -14,7 +14,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_findx
 PRODUCT_DEVICE := findx
 PRODUCT_BRAND := OPPO
-PRODUCT_MODEL := findx
+PRODUCT_MODEL := Find X
 PRODUCT_MANUFACTURER := OPPO
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
