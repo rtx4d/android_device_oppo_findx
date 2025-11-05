@@ -1,3 +1,42 @@
+#ifdef OPLUS_FEATURE_DEVICE_LOG
+#ZhuYan@NetWork.RF, 2020/09/27, Add for device log qdss system
+on post-fs-data
+    mkdir /data/vendor/oppo 0777 system system
+    mkdir /data/vendor/oppo/log 0777 system system
+    mkdir /data/vendor/oppo/log/device_log 0777 system system
+    mkdir /data/vendor/oppo/log/device_log/config 0777 system system
+    mkdir /data/vendor/oppo/log/device_log/diag_logs 0777 system system
+
+on boot
+    mkdir /data/opponvitems  0771 radio radio
+    write /proc/sys/fs/suid_dumpable 1
+    setprop persist.vendor.radio.force_on_dc true
+    chmod 0664 /dev/mdmreason
+    chown system system /dev/mdmreason
+
+#endif /*OPLUS_FEATURE_DEVICE_LOG*/
+
+on post-fs-data
+    chown system system /dev/mx6300_tac
+    chmod 0770 /dev/mx6300_tac
+
+    chown system system /proc/ldmp_sn
+    chown system system /proc/oppo_face_common/face_ir_sensor_tempature
+    chown system system /proc/oppo_face_common/face_ldmp_power
+    chown system system /proc/oppo_face_common/face_ldmp_tempature
+    chown system system /proc/oppo_face_common/face_ntc_svc
+    chown system system /proc/oppo_face_common/face_temp_ir
+    chown system system /proc/oppo_face_common/face_temp_ldmp
+    chown system system /proc/lm3644_enable
+    chown system system /proc/lm3643_enable
+    chown system system /proc/ldmp_enable
+    chown system system /proc/flood_led_enable
+    chown system system /proc/lm3644_power
+    chown system system /proc/lm3644_lightpower
+    chown system system /proc/ldmp_wdt_test
+    chown system system /proc/ldmp_doe_security
+    chown system system /proc/ldmp_sn
+
 on boot
     start rmt_storage
     start rfs_access

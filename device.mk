@@ -72,31 +72,27 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
-
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl:32 \
+    android.hardware.soundtrigger@2.1-impl \
     audio.primary.sdm845 \
-    sound_trigger.primary.sdm845 \
     audio.r_submix.default \
-    audio.usbv2.default \
-    libaudioroute.vendor \
-    libprocessgroup.vendor \
-    liba2dpoffload \
-    libsndmonitor \
+    audio.usb.default \
+    libbatterylistener \
     libcomprcapture \
-    libssrec \
+    libexthwplugin \
     libhdmiedid \
     libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
+    libssrec \
+    libsynth \
     libtinycompress \
     libvolumelistener \
     tinymix
@@ -121,7 +117,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_skuk.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skuk.xml \
     $(LOCAL_PATH)/audio/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9340.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9340.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_ODM)/etc/sound_trigger_platform_info.xml \
     $(LOCAL_PATH)/audio/usbv2_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usbv2_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
@@ -133,10 +129,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.audio-impl:32 \
+    android.hardware.bluetooth.audio@2.0-impl:32 \
     audio.bluetooth.default \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
@@ -149,7 +145,9 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor \
     libgui_shim \
     libui_shim.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    vendor.oplus.hardware.commondcs@1.0 \
+    vendor.oplus.hardware.commondcs@1.0-service
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -275,7 +273,9 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 #PRODUCT_PACKAGES += \
-#    vendor.lineage.livedisplay@2.0-service-sdm
+    vendor.lineage.livedisplay-service.oplus
+
+#$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,enable_dm,false)
 
 # Media
 PRODUCT_PACKAGES += \
@@ -344,7 +344,7 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
@@ -363,13 +363,13 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service \
+    android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/oplus \
     hardware/google/interfaces \
     hardware/google/pixel \
     vendor/qcom/opensource/usb/etc \

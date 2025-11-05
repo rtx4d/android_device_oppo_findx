@@ -23,6 +23,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/oppo/findx',
+    'hardware/oplus',
     'hardware/qcom-caf/sdm845',
     'hardware/qcom-caf/wlan',
     'hardware/qcom/wlan/legacy',
@@ -71,18 +72,11 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    ('odm/lib64/libwvhidl.so', 'odm/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
+        .add_needed('libcrypto_shim.so'),
     'system_ext/lib64/libantradio.so': blob_fixup()
         .add_needed('libnativehelper_shim.so'),
-    'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
-    ('vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service', 'vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so'): blob_fixup()
-        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
-    ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
-        .add_needed('libcrypto_shim.so'),
-    ('vendor/lib/libtsvideoprocess.so', 'libswregistrationalgo'): blob_fixup()
-        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/libvidhance.so': blob_fixup()
-        .add_needed('libdemangle.so')
         .add_needed('libcomparetf2_shim.so'),
 }  # fmt: skip
 

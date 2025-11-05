@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -22,5 +22,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-oppo
 PRODUCT_SYSTEM_NAME := findx
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="sdm845-user 10 QKQ1.191008.001 1622471973 release-keys" \
-    BuildFingerprint=OPPO/sdm845/sdm845:10/QKQ1.191008.001/1622471973:user/release-keys
+    BuildDesc="PAFM00-user 11 RKQ1.210510.002 1638952815838 release-keys" \
+    BuildFingerprint=OPPO/PAFM00/PAFM00:11/RKQ1.210510.002/1638952815838:user/release-keys
