@@ -1,10 +1,12 @@
 persist.vendor.camera.systemLogEnable=true
 persist.vendor.camera.logMetaEnable=true
-persist.vendor.camera.logVerboseMask=0xFFFFFFFF
-persist.vendor.camera.logPerfInfoMask=0xFFFFFFFF
-persist.vendor.camera.logInfoMask=0xFFFFFFFF
-persist.vendor.camera.logEntryExitMask=0xFFFFFFFF
+persist.vendor.camera.logVerboseMask=0x5117BEEF
+persist.vendor.camera.logPerfInfoMask=0x5117BEEF
+persist.vendor.camera.logInfoMask=0x5117BEEF
+persist.vendor.camera.logEntryExitMask=0x5117BEEF
 vendor.debug.camera.overrideLogLevels=0xFF
+persist.vendor.camera.logWarningMask=0xFFFFFFFFFFFFFFFF
+persist.debug.camera.overrideLogLevels=4
 # Audio
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true

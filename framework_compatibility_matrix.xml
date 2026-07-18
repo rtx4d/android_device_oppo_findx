@@ -1,7 +1,6 @@
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl">
         <name>vendor.oppo.hardware.camera.oppoAlgoProcessService</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOppoAlgoProcessService</name>
@@ -10,7 +9,6 @@
     </hal>
     <hal format="hidl">
         <name>vendor.oppo.hardware.camera.oppoHalAssist</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOppoHalAssist</name>
@@ -19,7 +17,6 @@
     </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.appradio</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOplusAppRadio</name>
@@ -29,7 +26,6 @@
     </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.bluetooth_audio</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOBluetoothAudio</name>
@@ -38,7 +34,6 @@
     </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.commondcs</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ICommonDcsHalService</name>
@@ -47,7 +42,6 @@
     </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.ims</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOplusImsRadio</name>
@@ -57,7 +51,6 @@
     </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.orms</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOrmsHalProxy</name>
@@ -65,13 +58,38 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.oplus.hardware.orms.ormsHalService</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOrmsHalService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.oplus.hardware.radio</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IOplusRadio</name>
             <instance>oplus_slot1</instance>
             <instance>oplus_slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.biometrics.faceservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFaceHalService</name>
+            <instance>faceservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.biometrics.face</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBiometricsFace</name>
+            <instance>default</instance>
         </interface>
     </hal>
 </compatibility-matrix>

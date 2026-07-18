@@ -204,11 +204,11 @@ vendor/firmware/ois_bu24218gwl.prog
 odm/lib64/libbsproxy.so
 odm/lib64/libormshalclient.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
-odm/lib64/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-impl.so
-odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
-odm/etc/init/vendor.oplus.hardware.orms.ormsHalService@1.0-service.rc
-odm/etc/vintf/manifest/manifest_oplus_orms.xml
-odm/bin/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-service
+#odm/lib64/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-impl.so
+#odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
+#odm/etc/init/vendor.oplus.hardware.orms.ormsHalService@1.0-service.rc
+#odm/etc/vintf/manifest/manifest_oplus_orms.xml
+#odm/bin/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-service
 #system_ext/bin/common_dcs
 #system_ext/etc/init/common_dcs.rc
 #system_ext/lib64/libcommon_dcs_service.so
@@ -407,6 +407,14 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# Face
+odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service
+odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc
+odm/lib64/libcalib_param_parser.so
+odm/lib64/librobust_match.so
+odm/lib64/librobust_solve.so
+odm/lib64/vendor.oplus.hardware.biometrics.face@1.0.so
+
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
@@ -520,6 +528,14 @@ vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # IMS
+system_ext/framework/oplus-ims-ext.jar
+system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/priv-app/ims/ims.apk
 odm/lib64/vendor.oplus.hardware.ims@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
@@ -569,7 +585,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
@@ -619,6 +635,63 @@ vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
+
+# ODM Firmware
+odm/vendor/firmware/cryptoeng.b01
+odm/vendor/firmware/portrait64.b00
+odm/vendor/firmware/cppf.b06
+odm/vendor/firmware/alipay.b07
+odm/vendor/firmware/seccamfacereg64.b02
+odm/vendor/firmware/cryptoeng.mdt
+odm/vendor/firmware/widevine.b07
+odm/vendor/firmware/widevine.b00
+odm/vendor/firmware/portrait64.b07
+odm/vendor/firmware/cppf.b01
+odm/vendor/firmware/alipay.b00
+odm/vendor/firmware/seccamfacereg64.b05
+odm/vendor/firmware/cppf.mdt
+odm/vendor/firmware/cryptoeng.b06
+odm/vendor/firmware/cryptoeng.b02
+odm/vendor/firmware/seccamfacereg64.mdt
+odm/vendor/firmware/seccamfacereg64.b01
+odm/vendor/firmware/alipay.b04
+odm/vendor/firmware/cppf.b05
+odm/vendor/firmware/portrait64.b03
+odm/vendor/firmware/widevine.b04
+odm/vendor/firmware/widevine.b03
+odm/vendor/firmware/seccamfacereg64.b06
+odm/vendor/firmware/alipay.b03
+odm/vendor/firmware/cppf.b02
+odm/vendor/firmware/portrait64.b04
+odm/vendor/firmware/megviifacepp_model_tee
+odm/vendor/firmware/cryptoeng.b05
+odm/vendor/firmware/alipay.mdt
+odm/vendor/firmware/widevine.mdt
+odm/vendor/firmware/cryptoeng.b07
+odm/vendor/firmware/widevine.b01
+odm/vendor/firmware/seccamfacereg64.b04
+odm/vendor/firmware/alipay.b01
+odm/vendor/firmware/cppf.b00
+odm/vendor/firmware/portrait64.b06
+odm/vendor/firmware/seccamfacereg64.b03
+odm/vendor/firmware/alipay.b06
+odm/vendor/firmware/cppf.b07
+odm/vendor/firmware/portrait64.b01
+odm/vendor/firmware/widevine.b06
+odm/vendor/firmware/cryptoeng.b00
+odm/vendor/firmware/portrait64.mdt
+odm/vendor/firmware/cryptoeng.b04
+odm/vendor/firmware/widevine.b02
+odm/vendor/firmware/portrait64.b05
+odm/vendor/firmware/cppf.b03
+odm/vendor/firmware/alipay.b02
+odm/vendor/firmware/seccamfacereg64.b07
+odm/vendor/firmware/portrait64.b02
+odm/vendor/firmware/cppf.b04
+odm/vendor/firmware/alipay.b05
+odm/vendor/firmware/seccamfacereg64.b00
+odm/vendor/firmware/widevine.b05
+odm/vendor/firmware/cryptoeng.b03
 
 # OMX
 vendor/lib/libOmxVpp.so
@@ -769,6 +842,7 @@ vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
 # Sensors
+odm/etc/sensor/sensor_config.json
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
@@ -785,7 +859,7 @@ vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/oplus.sensors.ssc.so
-vendor/lib64/sensors.ssc.so
+vendor/lib64/sensors.ssc.so|8a689d630b2839bb3ba8c6c99cada1a5f136edd6
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib/libsensorslog.so
 vendor/lib/libssc.so

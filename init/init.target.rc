@@ -1,3 +1,17 @@
+on boot
+    mkdir /mnt/vendor/persist/rpmb_status/
+    chmod 0777 /mnt/vendor/persist/rpmb_status/
+    chown system system /mnt/vendor/persist/rpmb_status/
+    chown system system /proc/oplus_secure_common/secureType
+
+on post-fs-data
+    mkdir /data/vendor_de/rpmb_status/
+    chmod 0777 /data/vendor_de/rpmb_status/
+    chown system system /data/vendor_de/rpmb_status/
+    mkdir /data/vendor_de/rpmb_status/.lii
+    chmod 0777 /data/vendor_de/rpmb_status/.lii
+    chown system system /data/vendor_de/rpmb_status/.lii
+
 #ifdef OPLUS_FEATURE_DEVICE_LOG
 #ZhuYan@NetWork.RF, 2020/09/27, Add for device log qdss system
 on post-fs-data

@@ -268,8 +268,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.akershus
 
 # Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.health-service.default
 
 # LiveDisplay
 #PRODUCT_PACKAGES += \
@@ -353,6 +353,8 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2 \
     libsqlite.vendor:64
+
+$(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

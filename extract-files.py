@@ -78,6 +78,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libnativehelper_shim.so'),
     'vendor/lib64/libvidhance.so': blob_fixup()
         .add_needed('libcomparetf2_shim.so'),
+    'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+        https://github.com/OP46B1-Dev/android_device_oppo_OP46B1/commit/8b6bdf76049f95985f27a8299202c11478740fa4
 }  # fmt: skip
 
 module = ExtractUtilsModule(

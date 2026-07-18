@@ -294,15 +294,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.oplus.hardware.orms</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOrmsHalProxy</name>
-            <instance>ORMS_HAL_PROXY</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oplus.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -310,6 +301,24 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IOplusRadio</name>
             <instance>oplus_slot1</instance>
             <instance>oplus_slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.biometrics.face</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBiometricsFace</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.biometrics.faceservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFaceHalService</name>
+            <instance>faceservice</instance>
         </interface>
     </hal>
     <hal format="hidl">
